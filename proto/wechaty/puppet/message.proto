@@ -18,6 +18,7 @@ import "wechaty/puppet/image.proto";
 import "wechaty/puppet/location.proto";
 import "wechaty/puppet/mini-program.proto";
 import "wechaty/puppet/url-link.proto";
+import "wechat/puppet/channel.proto";
 
 enum MessageType {
   MESSAGE_TYPE_UNSPECIFIED  = 0;
@@ -104,6 +105,13 @@ message MessageUrlResponse {
   UrlLinkPayload url_link = 2;
 }
 
+message MessageChannelRequest {
+  string id = 1;
+}
+message MessageChannelResponse {
+  ChannelPayload channel = 1;
+}
+
 message MessageSendContactRequest {
   string conversation_id = 1;
   string contact_id = 2;
@@ -186,6 +194,14 @@ message MessageSendUrlResponse {
    */
   google.protobuf.StringValue id_string_value_deprecated = 1 [deprecated = true]; // Deprecated after Sep 31, 2021, will be removed after Dec 31, 2022
   string id = 2;
+}
+
+message MessageSendChannelRequest {
+  string conversation_id = 1;
+  ChannelPayload channel = 2;
+}
+message MessageSendChannelResponse {
+  string id = 1;
 }
 
 message MessageRecallRequest {
