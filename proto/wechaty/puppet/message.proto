@@ -18,7 +18,7 @@ import "wechaty/puppet/image.proto";
 import "wechaty/puppet/location.proto";
 import "wechaty/puppet/mini-program.proto";
 import "wechaty/puppet/url-link.proto";
-import "wechat/puppet/channel.proto";
+import "wechaty/puppet/channel.proto";
 
 enum MessageType {
   MESSAGE_TYPE_UNSPECIFIED  = 0;
